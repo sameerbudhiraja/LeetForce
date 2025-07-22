@@ -117,7 +117,7 @@ function ChatPage() {
           {/* Right Side - Links */}
           <div className="flex items-center space-x-3">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/sameerbudhiraja/LeetForce---init"
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
@@ -125,7 +125,7 @@ function ChatPage() {
               <Github className="w-5 h-5 text-orange-300 hover:text-orange-100 transition-colors duration-150" />
             </a>
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="www.linkedin.com/in/sameer-budhiraja"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
