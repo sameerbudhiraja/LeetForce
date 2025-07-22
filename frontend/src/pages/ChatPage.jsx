@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+
 import {
   Code2,
   User,
@@ -12,6 +13,7 @@ import {
   ExternalLink,
   Linkedin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function ChatPage() {
   const [message, setMessage] = useState("");
@@ -143,11 +145,11 @@ function ChatPage() {
                 CGC-Unite
               </p>
             </a>
-            <a href="/about" style={{ textDecoration: "none" }}>
+            <Link href="/about" style={{ textDecoration: "none" }}>
               <div className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-orange-300 hover:text-orange-200 rounded-lg transition-all duration-200 font-medium border border-orange-500/20">
                 About
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
