@@ -125,7 +125,7 @@ function ChatPage() {
               <Github className="w-5 h-5 text-orange-300 hover:text-orange-100 transition-colors duration-150" />
             </a>
             <a
-              href="www.linkedin.com/in/sameer-budhiraja"
+              href="https://linkedin.com/in/sameer-budhiraja"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
