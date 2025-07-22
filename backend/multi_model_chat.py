@@ -10,6 +10,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Backend Origin
+LEETFORCE_FRONTEND = os.getenv("LEETFORCE_FRONTEND")
+
 # load api keys 
 GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 OPEN_ROUTER_API_KEY = os.getenv("OPEN_ROUTER_API_KEY")
@@ -33,7 +36,7 @@ app = FastAPI()
 # cors 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # your React frontend's origin
+    allow_origins=[LEETFORCE_FRONTEND],  # your React frontend's origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
