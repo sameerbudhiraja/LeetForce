@@ -46,16 +46,13 @@ function ChatPage() {
     setLoading(true);
 
     try {
-      const res = await fetch(
-        `${import.meta.env.LEETFORCE_RENDER_BACKEND_URLL}/chat`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ message: userMessage }),
-        }
-      );
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: userMessage }),
+      });
 
       const data = await res.json();
       if (!data.response) {
