@@ -145,7 +145,7 @@ function ChatPage() {
                 CGC-Unite
               </p>
             </a>
-            <Link href="/about" style={{ textDecoration: "none" }}>
+            <Link to="/about" style={{ textDecoration: "none" }}>
               <div className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-orange-300 hover:text-orange-200 rounded-lg transition-all duration-200 font-medium border border-orange-500/20">
                 About
               </div>
