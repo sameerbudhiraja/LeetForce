@@ -58,7 +58,7 @@ function ChatPage() {
 
       const data = await res.json();
 
-      if (!data.content) {
+      if (!data.response) {
         throw new Error(data.message || "Invalid response format");
       }
 
@@ -66,7 +66,7 @@ function ChatPage() {
       const botMessage = {
         id: Date.now() + 1,
         type: "bot",
-        content: data.content,
+        content: data.response,
         timestamp: new Date(),
       };
 
