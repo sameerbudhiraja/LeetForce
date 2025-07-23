@@ -70,6 +70,7 @@ def chat(request: ChatRequest):
 
     # get initial res from google chat 
     google_response = google_chat.send_message(msg)
+    print(google_response.text)
 
     print("<----------------Response Started---------------->")
     # while True:
@@ -78,6 +79,7 @@ def chat(request: ChatRequest):
         print("Processing---------------->")
 
         raw = google_response.text.strip()
+        print(raw)
 
         # Remove outer double braces {{ ... }}
         if raw.startswith("{{") and raw.endswith("}}"):
@@ -105,6 +107,10 @@ def chat(request: ChatRequest):
                 google_response = google_chat.send_message(open_response)
                 continue
 
+        if parsed['step'] == "hint":
+            print("response Print" , parsed['content'])
+            return {"response": parsed['content']}
+        
         # display response to end user 
         if parsed['step'] == "display":
             print("response Print" , parsed['content'])
