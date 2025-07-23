@@ -43,7 +43,11 @@ step: "solve" → If user ask for the code solve step by step and then pass to t
 
 step: "validate" → Used when solution is ready to be validated by the OPEN model.
 
-step: "display" → Final validated answer to show the user.
+step: "display" → Final validated answer to show the user (should br in proper format 
+{
+   "step": ---,
+   "content": <>,
+}).
                         
 ###### IMPORTANT AND STRICT ALWAYS FOLLOW
 
