@@ -56,19 +56,23 @@ function ChatPage() {
         body: JSON.stringify({ message: userMessage }),
       });
 
-      const data = {
-        content: res,
-      };
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
 
-      if (!data.content) {
-        throw new Error(data.message || "Invalid response format");
+      const content = JSON.parse(response).response;
+
+      if (!content) {
+        throw new Error(
+          data.message || "Invalid response format: (Content may invalid ?)"
+        );
       }
 
       // Add bot response to conversation
       const botMessage = {
         id: Date.now() + 1,
         type: "bot",
-        content: data.content,
+        content: content,
         timestamp: new Date(),
       };
 
