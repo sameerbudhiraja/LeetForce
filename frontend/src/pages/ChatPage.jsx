@@ -60,7 +60,7 @@ function ChatPage() {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
 
-      const content = JSON.parse(response).response;
+      const content = JSON.parse(res).response;
 
       if (!content) {
         throw new Error(
